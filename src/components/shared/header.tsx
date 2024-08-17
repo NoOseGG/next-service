@@ -26,7 +26,7 @@ export const Header: React.FC<Props> = ({ className }) => {
         >
           <Link href="/">
             <img
-              className="h-auto w-40 cursor-pointer"
+              className="h-auto w-40 cursor-pointer transition-transform duration-500 ease-in-out hover:scale-110"
               src="/logo.svg"
               alt="logo"
             />
