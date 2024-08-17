@@ -12,12 +12,18 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = ({ className }) => {
-  const menuItemStyle = "cursor-pointer hover:text-black/50 hover:underline";
+  const menuItemStyle =
+    "cursor-pointer transition-colors duration-500 ease-to-in hover:text-black/30 hover:underline";
 
   return (
-    <header className="w-full">
+    <header className="w-full border-b-2">
       <Container>
-        <div className={cn("flex w-full p-3 justify-between items-center", className)}>
+        <div
+          className={cn(
+            "flex w-full p-3 justify-between items-center",
+            className
+          )}
+        >
           <Link href="/">
             <img
               className="h-auto w-40 cursor-pointer"
@@ -25,7 +31,7 @@ export const Header: React.FC<Props> = ({ className }) => {
               alt="logo"
             />
           </Link>
-          <div className="flex justify-center items-center gap-2">
+          <div className="flex justify-center items-center gap-3">
             <Link href="/">
               <span className={menuItemStyle}>Home</span>
             </Link>
